@@ -1,0 +1,11 @@
+<%= simple_form_for(@task) do |f| %>
+  <%#= f.label :title %>
+  <%= f.input :title %>
+  <%#= f.label :details %>
+  <%= f.input :details %>
+  <% if @task.persisted? %> <%# meaning if the task has an id - so we're in an edit %>
+  <%= f.input :completed %>
+  <% end %>
+  <%= f.submit %>
+<% end %>
+
